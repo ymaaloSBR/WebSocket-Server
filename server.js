@@ -14,6 +14,8 @@ var redis = new Redis(redis_address);
 var redis_subscribers = {};
 var channel_history_max = 10;
 
+app.use(express.static('public'));
+
 app.get('/health', function(request, response) {
     response.send('ok');
 });
